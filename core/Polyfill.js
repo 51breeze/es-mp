@@ -1,8 +1,7 @@
 const path = require("path");
-const Core = require("./Core");
+const Polyfill = require('es-javascript/core/Polyfill')
 const Modules = new Map();
-Core.Polyfill.createEveryModule(Modules, path.join(__dirname,"../","polyfill") );
-
+Polyfill.createEveryModule(Modules, path.join(__dirname,"../","polyfill") );
 module.exports={
     path:path.join(__dirname,"../","polyfill"),
     Modules,
